@@ -31,6 +31,10 @@
   user-select: none;
 }
 
+.piece-417db {
+  pointer-events: none;
+}
+
 .white-1e1d7 {
   background-color: #eaebd7;
 }
