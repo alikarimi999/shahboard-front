@@ -1,4 +1,3 @@
-// const { Chess } = require('chess.js');
 import { connectWebSocket, sendMessage, closeConnection, registerMessageHandler, unregisterMessageHandler } from './ws.js';
 
 const ColorWhite = 1;
@@ -14,8 +13,6 @@ var currentGame = {
         id: null,
     }
 };
-
-
 
 var whiteSquareYellow = '#F5F58D'
 var blackSquareYellow = '#BAC949'
@@ -410,39 +407,6 @@ window.addEventListener("beforeunload", () => {
     unregisterMessageHandler("move_approved");
     unregisterMessageHandler("game_ended");
 });
-
-
-// $('#board').on('click', '.square-55d63', function (event) {
-//     console.log("Square clicked:", event.target); // Log the clicked square
-
-//     // Get the square identifier (e.g., 'e4', 'd5', etc.)
-//     var square = $(this).attr('data-square');
-//     console.log('Square clicked:', square, selectedSquare);
-
-//     if (!square) return; // Avoid undefined values
-
-//     if (!selectedSquare) {
-//         onSquareClick(square); // First click selects the piece
-//     } else {
-//         onSquareSelect(square); // Second click makes the move
-//     }
-// });
-
-// $('#board').on('click', '.piece-417db', function (event) {
-//     console.log("Piece clicked:", event.target); // Log the clicked piece
-
-//     // Get the square identifier from the parent square of the piece
-//     var square = $(this).closest('.square-55d63').attr('data-square');
-//     console.log('Piece clicked:', square, selectedSquare);
-
-//     if (!square) return; // Avoid undefined values
-
-//     if (!selectedSquare) {
-//         onSquareClick(square); // First click selects the piece
-//     } else {
-//         onSquareSelect(square); // Second click makes the move
-//     }
-// });
 
 
 // Add click-based event handlers using event delegation
